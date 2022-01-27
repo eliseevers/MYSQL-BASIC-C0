@@ -333,10 +333,10 @@ id	name	age	nationality	club	value	wage
 228762	G. Troup e 	19	Netherlands 	FC Utrecht 	32000000	4000	
 234198	D. Dankerlui 	20	Netherlands 	Ajax 	500000	2000	
 	
-
+-- opdracht14
 SELECT*FROM players WHERE nationality="england" AND age>20 AND wage>100000;
 
---OPDRACHT14
+
 id	name	age	nationality	club	value	wage	
 138412	J. Milner 	31	England 	Liverpool 	95000000	110000	
 164468	G. Cahill 	31	England 	Chelsea 	21000000	160000	

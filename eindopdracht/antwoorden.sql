@@ -63,10 +63,10 @@ SELECT SUM(NA_Sales) AS hoeveelheid_spellen_sport_noord_amerika FROM videogamesa
 -- Opdracht 4
 127.0.0.1/mod-mysql-basic-opdracht/videogamesales/		http://localhost/phpmyadmin/index.php?route=/database/sql&db=mod-mysql-basic-opdracht
 
-   Weergave van records 0 - 24 (228 totaal, Query duurde 0,0019 seconden.)
+   Weergave van records 0 - 24 (992 totaal, Query duurde 0,0064 seconden.)
 
 
-SELECT name, platform FROM videogamesales WHERE publisher = "Nintendo" OR year = 1990 AND year = 2005;
+SELECT name, platform FROM videogamesales WHERE publisher = "Nintendo" BETWEEN 1990 AND 2005;
 
 
 name	platform	
@@ -85,16 +85,17 @@ Mario Kart DS 	DS
 Pokemon Gold/Pokemon Silver 	GB 	
 Wii Fit 	Wii 	
 Wii Fit Plus 	Wii 	
+Kinect Adventures! 	X360 	
+Grand Theft Auto V 	PS3 	
+Grand Theft Auto: San Andreas 	PS2 	
 Super Mario World 	SNES 	
 Brain Age: Train Your Brain in Minutes a Day 	DS 	
 Pokemon Diamond/Pokemon Pearl 	DS 	
 Super Mario Land 	GB 	
 Super Mario Bros. 3 	NES 	
-Pokemon Ruby/Pokemon Sapphire 	GBA 	
-Pokemon Black/Pokemon White 	DS 	
-Brain Age 2: More Training in Minutes a Day 	DS 	
-Pok�mon Yellow: Special Pikachu Edition 	GB 	
-Pokemon X/Pokemon Y 	3DS 	
+Grand Theft Auto V 	X360 	
+Grand Theft Auto: Vice City 	PS2 	
+	
 
 -- Opdracht 5
 127.0.0.1/mod-mysql-basic-opdracht/videogamesales/		http://localhost/phpmyadmin/index.php?route=/database/sql&db=mod-mysql-basic-opdracht
@@ -184,10 +185,10 @@ SELECT AVG(NA_Sales) AS Gemiddelde_aantal_verkoop_Noord_Amerika, AVG(EU_Sales) A
 -- Opdracht 11
 DELETE FROM videogamesales WHERE name = "halo 2";
 -- Opdracht 12
-DELETE FROM videogamesales WHERE year = 2012 OR publisher = "ubisoft"
+DELETE FROM videogamesales WHERE year = 2012 OR (publisher = "ubisoft")
 -- Opdracht 13
 DELETE FROM videogamesales WHERE genre = "adventure" AND publisher = "nintendo"
 -- Opdracht 14
 DELETE FROM videogamesales WHERE publisher = "nintendo" AND Global_Sales < 1000
 -- Opdracht 15
-DELETE FROM videogamesales WHERE year = 1997 OR NA_Sales > 200000
+DELETE FROM videogamesales WHERE year = 1997 OR (NA_Sales > 200000)

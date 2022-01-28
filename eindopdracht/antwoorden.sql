@@ -185,10 +185,10 @@ SELECT AVG(NA_Sales) AS Gemiddelde_aantal_verkoop_Noord_Amerika, AVG(EU_Sales) A
 -- Opdracht 11
 DELETE FROM videogamesales WHERE name = "halo 2";
 -- Opdracht 12
-DELETE FROM videogamesales WHERE year = 2012 OR (publisher = "ubisoft")
+DELETE FROM videogamesales WHERE year = 2012 AND publisher = "ubisoft"
 -- Opdracht 13
 DELETE FROM videogamesales WHERE genre = "adventure" AND publisher = "nintendo"
 -- Opdracht 14
 DELETE FROM videogamesales WHERE publisher = "nintendo" AND Global_Sales < 1000
 -- Opdracht 15
-DELETE FROM videogamesales WHERE year = 1997 OR (NA_Sales > 200000)
+DELETE FROM videogamesales WHERE year = 1997 AND NA_Sales > 200000
